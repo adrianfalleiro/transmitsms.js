@@ -1,9 +1,9 @@
 transitsms.js
 =============
 
-Node wrapper for Transit SMS API. Uses `request` to make API calls.
+Node wrapper for Transit SMS API. Uses `request` to make API calls and `Q` to manage callbacks
 
-Currently only send method implemented
+TODO: Write test scripts & validate inputs & set defaults
 
 ### Usage
 ```
@@ -15,5 +15,9 @@ var transitsms = require('transitsms')({
 transitsms.send({
   to: 00000000000,
   message: 'Yo'
+}).then(function(data) {
+  console.log('Hey I'm Working!');
+}).catch(function(err) {
+  console.log('Boo, something bad happened')
 });
 ````

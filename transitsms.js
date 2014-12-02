@@ -480,7 +480,6 @@ transitsms.prototype.getKeywords = function(opts) {
  */
 // TODO: Set defaults and add validation
 transitsms.prototype.getTransactions = function(opts) {
-    $this->prepareFieldsForEdit($params);
     return this.apiRequest({
 		endpoint: 'get-transactions',
 		params: opts

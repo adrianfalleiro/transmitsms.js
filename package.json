@@ -1,0 +1,23 @@
+{
+  "name": "transitsms-api",
+  "version": "0.0.1",
+  "description": "Node.js port of TransitSMS API",
+  "main": "transitsms.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adrianfalleiro/transitsms.js.git"
+  },
+  "author": "Adrian Falleiro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adrianfalleiro/transitsms.js/issues"
+  },
+  "homepage": "https://github.com/adrianfalleiro/transitsms.js",
+  "dependencies": {
+    "q": "^1.1.2",
+    "request": "^2.48.0"
+  }
+}

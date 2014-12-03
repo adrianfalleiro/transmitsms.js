@@ -5,7 +5,7 @@
 
 var request = require('request'),
     Q = require('q'),
-    transitsms;
+    transmitsms;
 
 
 /*
@@ -15,7 +15,7 @@ var request = require('request'),
 
 */    
 // TODO: Set defaults and add validation
-transitsms = function (opts) {
+transmitsms = function (opts) {
     this._API_URL = 'https://api.transmitsms.com/';
 
     this.replyCbUrl = opts.replyCallbackUrl || false;    
@@ -29,7 +29,7 @@ transitsms = function (opts) {
 
 
 // TODO: Set defaults and add validation
-transitsms.prototype.apiRequest = function(opts) {
+transmitsms.prototype.apiRequest = function(opts) {
     var deferred = Q.defer();
     var params = opts.params;
 
@@ -69,7 +69,7 @@ transitsms.prototype.apiRequest = function(opts) {
 *
 */  
 // TODO: Set defaults and add validation
-transitsms.prototype.sendSms = function(opts) {            
+transmitsms.prototype.sendSms = function(opts) {            
     return this.apiRequest({
         endpoint: 'send-sms',
         params: opts
@@ -83,7 +83,7 @@ transitsms.prototype.sendSms = function(opts) {
  * 
  */
 // TODO: Set defaults and add validation
-transitsms.prototype.getSms = function(opts) {
+transmitsms.prototype.getSms = function(opts) {
     return this.apiRequest({
         endpoint: 'get-sms',
         params: opts
@@ -100,7 +100,7 @@ transitsms.prototype.getSms = function(opts) {
  *  
  */
 // TODO: Set defaults and add validation
-transitsms.getSmsSent = function(opts) {
+transmitsms.getSmsSent = function(opts) {
     return this.apiRequest({
         endpoint: 'get-sms-sent',
         params: opts
@@ -120,7 +120,7 @@ transitsms.getSmsSent = function(opts) {
  * 
  */
 // TODO: Set defaults and add validation
-transitsms.prototype.getSmsResponses = function(opts) {
+transmitsms.prototype.getSmsResponses = function(opts) {
     return this.apiRequest({
 		endpoint: 'get-sms-responses',
 		params: opts
@@ -138,7 +138,7 @@ transitsms.prototype.getSmsResponses = function(opts) {
  * 
  */
 // TODO: Set defaults and add validation
-transitsms.prototype.getUserSmsResponses = function(opts) {
+transmitsms.prototype.getUserSmsResponses = function(opts) {
     return this.apiRequest({
 		endpoint: 'get-user-sms-responses',
 		params: opts
@@ -155,7 +155,7 @@ transitsms.prototype.getUserSmsResponses = function(opts) {
  * 
  */
 // TODO: Set defaults and add validation
-transitsms.prototype.getUserSmsSent = function(opts) {
+transmitsms.prototype.getUserSmsSent = function(opts) {
     return this.apiRequest({
 		endpoint: 'get-user-sms-sent',
 		params: opts
@@ -170,7 +170,7 @@ transitsms.prototype.getUserSmsSent = function(opts) {
  */
 // TODO: Set defaults and add validation
 // TODO: Set defaults and add validation
-transitsms.prototype.cancelSms = function(opts) {
+transmitsms.prototype.cancelSms = function(opts) {
     return this.apiRequest({
 		endpoint: 'cancel-sms',
 		params: opts
@@ -188,7 +188,7 @@ transitsms.prototype.cancelSms = function(opts) {
  * 
  */
 // TODO: Set defaults and add validation
-transitsms.prototype.getList = function(opts) {
+transmitsms.prototype.getList = function(opts) {
     return this.apiRequest({
 		endpoint: 'get-list',
 		params: opts
@@ -203,7 +203,7 @@ transitsms.prototype.getList = function(opts) {
  * 
  */
 // TODO: Set defaults and add validation
-transitsms.prototype.getLists = function(opts) {
+transmitsms.prototype.getLists = function(opts) {
     return this.apiRequest({
 		endpoint: 'get-lists',
 		params: opts
@@ -218,7 +218,7 @@ transitsms.prototype.getLists = function(opts) {
  * 
  */
 // TODO: Set defaults and add validation
-transitsms.prototype.addList = function(opts) {
+transmitsms.prototype.addList = function(opts) {
     return this.apiRequest({
 		endpoint: 'add-list',
 		params: opts
@@ -236,7 +236,7 @@ transitsms.prototype.addList = function(opts) {
  * 
  */
 // TODO: Set defaults and add validation
-transitsms.prototype.addToList = function(opts) {
+transmitsms.prototype.addToList = function(opts) {
     return this.apiRequest({
 		endpoint: 'add-to-list',
 		params: opts
@@ -254,7 +254,7 @@ transitsms.prototype.addToList = function(opts) {
  * 
  */
 // TODO: Set defaults and add validation
-transitsms.prototype.editListMember = function(opts) {
+transmitsms.prototype.editListMember = function(opts) {
     return this.apiRequest({
 		endpoint: 'edit-list-member',
 		params: opts
@@ -269,7 +269,7 @@ transitsms.prototype.editListMember = function(opts) {
  * 
  */
 // TODO: Set defaults and add validation
-transitsms.prototype.deleteFromList = function(opts) {
+transmitsms.prototype.deleteFromList = function(opts) {
     return this.apiRequest({
 		endpoint: 'delete-from-list',
 		params: opts
@@ -284,7 +284,7 @@ transitsms.prototype.deleteFromList = function(opts) {
  * 
  */
 // TODO: Set defaults and add validation
-transitsms.prototype.optoutListMember = function(opts) {
+transmitsms.prototype.optoutListMember = function(opts) {
     return this.apiRequest({
 		endpoint: 'optout-list-member',
 		params: opts
@@ -299,7 +299,7 @@ transitsms.prototype.optoutListMember = function(opts) {
  */
 
 // TODO: Set defaults and add validation
-transitsms.prototype.getNumber = function(opts) {
+transmitsms.prototype.getNumber = function(opts) {
     return this.apiRequest({
 		endpoint: 'get-number',
 		params: opts
@@ -315,7 +315,7 @@ transitsms.prototype.getNumber = function(opts) {
  * 
  */
 // TODO: Set defaults and add validation
-transitsms.prototype.getNumbers = function(opts) {
+transmitsms.prototype.getNumbers = function(opts) {
     return this.apiRequest({
 		endpoint: 'get-numbers',
 		params: opts
@@ -329,7 +329,7 @@ transitsms.prototype.getNumbers = function(opts) {
  * 
  */
 // TODO: Set defaults and add validation
-transitsms.prototype.leaseNumber = function(opts) {
+transmitsms.prototype.leaseNumber = function(opts) {
     return this.apiRequest({
 		endpoint: 'lease-number',
 		params: opts
@@ -343,7 +343,7 @@ transitsms.prototype.leaseNumber = function(opts) {
  * 
  */
 // TODO: Set defaults and add validation
-transitsms.prototype.getClient = function(opts) {
+transmitsms.prototype.getClient = function(opts) {
     return this.apiRequest({
 		endpoint: 'get-client',
 		params: opts
@@ -358,7 +358,7 @@ transitsms.prototype.getClient = function(opts) {
  * 
  */     
 // TODO: Set defaults and add validation
-transitsms.prototype.getClients = function(opts) {
+transmitsms.prototype.getClients = function(opts) {
     return this.apiRequest({
 		endpoint: 'get-clients',
 		params: opts
@@ -379,7 +379,7 @@ transitsms.prototype.getClients = function(opts) {
  * 
  */
 // TODO: Set defaults and add validation
-transitsms.prototype.addClient = function(opts) {
+transmitsms.prototype.addClient = function(opts) {
     return this.apiRequest({
 		endpoint: 'add-client',
 		params: opts
@@ -401,7 +401,7 @@ transitsms.prototype.addClient = function(opts) {
  * 
  */
 // TODO: Set defaults and add validation
-transitsms.prototype.editClient = function(opts) {
+transmitsms.prototype.editClient = function(opts) {
     return this.apiRequest({
 		endpoint: 'edit-client',
 		params: opts
@@ -424,7 +424,7 @@ transitsms.prototype.editClient = function(opts) {
  * 
  */
 // TODO: Set defaults and add validation
-transitsms.prototype.addKeyword = function(opts) {
+transmitsms.prototype.addKeyword = function(opts) {
     return this.apiRequest({
 		endpoint: 'add-keyword',
 		params: opts
@@ -447,7 +447,7 @@ transitsms.prototype.addKeyword = function(opts) {
  * 
  */
 // TODO: Set defaults and add validation
-transitsms.prototype.editKeyword = function(opts) {
+transmitsms.prototype.editKeyword = function(opts) {
     return this.apiRequest({
 		endpoint: 'edit-keyword',
 		params: opts
@@ -463,7 +463,7 @@ transitsms.prototype.editKeyword = function(opts) {
  * 
  */
 // TODO: Set defaults and add validation
-transitsms.prototype.getKeywords = function(opts) {
+transmitsms.prototype.getKeywords = function(opts) {
     return this.apiRequest({
 		endpoint: 'get-keywords',
 		params: opts
@@ -479,7 +479,7 @@ transitsms.prototype.getKeywords = function(opts) {
  * 
  */
 // TODO: Set defaults and add validation
-transitsms.prototype.getTransactions = function(opts) {
+transmitsms.prototype.getTransactions = function(opts) {
     return this.apiRequest({
 		endpoint: 'get-transactions',
 		params: opts
@@ -493,7 +493,7 @@ transitsms.prototype.getTransactions = function(opts) {
  * 
  */
 // TODO: Set defaults and add validation
-transitsms.prototype.getTransaction = function(opts) {
+transmitsms.prototype.getTransaction = function(opts) {
     return this.apiRequest({
 		endpoint: 'get-transaction',
 		params: opts
@@ -509,7 +509,7 @@ transitsms.prototype.getTransaction = function(opts) {
  * 
  */
 // TODO: Set defaults and add validation
-transitsms.prototype.addEmail = function(opts) {
+transmitsms.prototype.addEmail = function(opts) {
     return this.apiRequest({
 		endpoint: 'add-email',
 		params: opts
@@ -523,7 +523,7 @@ transitsms.prototype.addEmail = function(opts) {
  * 
  */
 // TODO: Set defaults and add validation
-transitsms.prototype.deleteEmail = function(opts) {
+transmitsms.prototype.deleteEmail = function(opts) {
     return this.apiRequest({
 		endpoint: 'delete-email',
 		params: opts
@@ -535,18 +535,18 @@ transitsms.prototype.deleteEmail = function(opts) {
  * 
  */
 // TODO: Set defaults and add validation
-transitsms.prototype.getBalance = function() {
+transmitsms.prototype.getBalance = function() {
     return this.apiRequest({
         endpoint: 'get-balance'
     });
 }
 
 // TODO: Set defaults and add validation
-transitsms.prototype.formatNumber = function(opts) {
+transmitsms.prototype.formatNumber = function(opts) {
     return this.apiRequest({
         endpoint: 'format-number',
         params: opts
     });
 }
 
-module.exports = transitsms;
+module.exports = transmitsms;
